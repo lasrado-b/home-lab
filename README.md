@@ -65,12 +65,12 @@ I'm Bosco Lasrado, an IT Support and Customer Experience Professional with 5+ ye
 ```
 /README.md <- Project overview, goals, setup
 /checklist.md <- Weekly or project-based to-do list
-/configs/ <- Config files from your VMs or pfSense
+/configs/ <- Config files
 ├── netplan-static-ip.yaml
 ├── pfSense-firewall-rules.md
-/logs/ <- Test results, command outputs, or troubleshooting notes
+/logs/ <- Test results, command outputs, and troubleshooting notes
 ├── connectivity-tests.md
 └── troubleshooting-notes.md
-/diagrams/ <- Network diagrams or screenshots
+/diagrams/ <- Network diagrams
 └── network-topology.drawio
 ```
