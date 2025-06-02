@@ -59,7 +59,7 @@ I'm Bosco Lasrado, an IT Support and Customer Experience Professional with 5+ ye
 
 ## 📸 Network Diagram
 
-![Network Diagram](diagrams/NetworkDiagram.drawio.png)
+![Network Diagram](diagrams/network-topology.png)
 
 ## 📁 Repo Structure
 /README.md <- Project overview, goals, setup
