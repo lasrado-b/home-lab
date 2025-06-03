@@ -29,20 +29,20 @@ Verify remote access from Kali Linux to Ubuntu Server via SSH.
 
 ## Outcome
 
-    SSH connection successful from Kali → Ubuntu
+   SSH connection successful from Kali → Ubuntu
 
-    Verified hostname and network
+   Verified hostname and network
 
-    Successfully created a file over SSH
+   Successfully created a file over SSH
 
-    No issues encountered
+   No issues encountered
 
 ## Notes
 
 SSH access is now enabled and can be used for:
 
-    Remote system management
+   Remote system management
 
-    File transfers (scp, rsync)
+   File transfers (scp, rsync)
 
-    Scripting and automation (Ansible-ready)
+   Scripting and automation (Ansible-ready)
