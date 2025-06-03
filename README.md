@@ -1,16 +1,16 @@
-# 🧠 Home Lab: IT Networking & Security Simulation
+# Home Lab: IT Networking & Security Simulation
 
 This is a self-directed home lab built to simulate a small office IT environment. The goal is to strengthen real-world skills in networking, system administration, and cybersecurity using open-source tools and virtual machines. It complements my formal certifications and customer support experience as I transition into technical IT roles.
 
 ---
 
-## 👤 About Me
+## About Me
 
 I'm Bosco Lasrado, an IT Support and Customer Experience Professional with 5+ years in customer-facing roles and recent hands-on technical training. Certified in CompTIA Network+ and Google IT Support, I'm building this home lab to sharpen skills and demonstrate initiative to prospective employers.
 
 ---
 
-## 🔧 Lab Environment
+## Lab Environment
 
 | VM Name       | OS             | Role               | IP Address      | Hostname       |
 |---------------|----------------|--------------------|------------------|----------------|
@@ -21,7 +21,7 @@ I'm Bosco Lasrado, an IT Support and Customer Experience Professional with 5+ ye
 
 ---
 
-## 🎯 Project Goals
+## Project Goals
 
 - Simulate a real-world small office IT infrastructure
 - Implement firewall rules and VLAN segmentation with pfSense
@@ -31,7 +31,7 @@ I'm Bosco Lasrado, an IT Support and Customer Experience Professional with 5+ ye
 
 ---
 
-## ✅ Current Progress
+## Current Progress
 
 - [x] Deployed pfSense with LAN/WAN configuration
 - [x] Installed and configured Ubuntu Server with static IP
@@ -43,7 +43,7 @@ I'm Bosco Lasrado, an IT Support and Customer Experience Professional with 5+ ye
 
 ---
 
-## 🛠️ Tools and Technologies Used
+## Tools and Technologies Used
 
 - VirtualBox
 - pfSense CE
@@ -57,11 +57,11 @@ I'm Bosco Lasrado, an IT Support and Customer Experience Professional with 5+ ye
 
 ---
 
-## 📸 Network Diagram
+## Network Diagram
 
 ![Network Diagram](diagrams/network-topology.png)
 
-## 📁 Repo Structure
+## Repo Structure
 ```
 /README.md <- Project overview, goals, setup
 /checklist.md <- Weekly or project-based to-do list
