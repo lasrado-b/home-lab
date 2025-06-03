@@ -10,4 +10,5 @@
 
 **Fix (via Command Line):**
 Open **Command Prompt as Administrator** and run:
+```
 netsh advfirewall firewall add rule name="Allow ICMPv4-In" protocol=icmpv4:8,any dir=in action=allow
