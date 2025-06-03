@@ -7,8 +7,8 @@
 - [ ] Ensure all VMs can ping each other and pfSense
 
 ## 🔐 Remote Access
-- [ ] Install and enable OpenSSH on Ubuntu Server
-- [ ] Test SSH access from Kali to Ubuntu
+- [x] Install and enable OpenSSH on Ubuntu Server
+- [x] Test SSH access from Kali to Ubuntu
 
 ## 🔥 Firewall Configuration
 - [ ] Create a pfSense rule to block ICMP (ping) from Kali to Ubuntu
