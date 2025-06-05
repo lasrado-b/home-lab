@@ -42,7 +42,7 @@ Started and enabled it to run on boot:
 
 ### Custom Page Deployed
 
-the default Nginx was replaced with a custom 'index.html' located at: /var/www/html/index.html
+The default Nginx was replaced with a custom 'index.html' located at: /var/www/html/index.html
 
 ---
 
