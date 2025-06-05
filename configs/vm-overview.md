@@ -8,7 +8,7 @@ This file documents the current virtual machines deployed in the home lab enviro
 
 | VM Name       | OS             | Hostname       | IP Address       | Role / Purpose                   |
 |---------------|----------------|----------------|------------------|----------------------------------|
-| pfSense        | pfSense CE     | pfsense         | LAN: 192.168.1.1 | Router / Firewall                |
+| pfSense        | pfSense CE     | pfsense         | 192.168.1.1      | Router / Firewall (LAN Gateway)  |
 | Ubuntu Server  | Ubuntu 22.04   | ubuntu-srv      | 192.168.1.10     | Internal server (SSH, Pi-hole)   |
 | Windows 10     | Windows 10     | win10-user      | 192.168.1.100    | Workstation (simulated employee) |
 | Kali Linux     | Kali Linux     | kali-attack     | 192.168.1.102    | Attacker / penetration testing   |
