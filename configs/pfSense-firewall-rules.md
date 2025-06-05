@@ -51,13 +51,13 @@ To simulate basic internet network segmentation by preventing the "attacker" VM 
   ping: sendmsg: No route to host
 
 - From Ubuntu:
- ```
- PING 192.168.1.102 (192.168.1.102) 56(84) bytes of data.
- 64 bytes from 192.168.1.102: icmp_seq=1 ttl=64 time=0.019 ms
- 64 bytes from 192.168.1.102: icmp_seq=2 ttl=64 time=0.032 ms
- 64 bytes from 192.168.1.102: icmp_seq=3 ttl=64 time=0.039 ms
- ^C
- --- 192.168.1.102 ping statistics ---
- 3 packets transmitted, 3 received, 0% packet loss, time 2027ms
- rtt min/avg/max/mdev = 0.019/0.030/0.039/0.008 ms
+  ```
+  PING 192.168.1.102 (192.168.1.102) 56(84) bytes of data.
+  64 bytes from 192.168.1.102: icmp_seq=1 ttl=64 time=0.019 ms
+  64 bytes from 192.168.1.102: icmp_seq=2 ttl=64 time=0.032 ms
+  64 bytes from 192.168.1.102: icmp_seq=3 ttl=64 time=0.039 ms
+  ^C
+  --- 192.168.1.102 ping statistics ---
+  3 packets transmitted, 3 received, 0% packet loss, time 2027ms
+  rtt min/avg/max/mdev = 0.019/0.030/0.039/0.008 ms
  
