@@ -43,6 +43,7 @@ Started and enabled it to run on boot:
 ### Custom Page Deployed
 
 The default Nginx was replaced with a custom 'index.html' located at: /var/www/html/index.html
+
 The page includes basic server information and confirms internal web hosting. 
 
 ---
