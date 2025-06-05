@@ -11,9 +11,9 @@
 - [x] Test SSH access from Kali to Ubuntu
 
 ## Firewall Configuration
-- [ ] Create a pfSense rule to block ICMP (ping) from Kali to Ubuntu
-- [ ] Test and log blocked traffic
-- [ ] Document the rule's purpose and behavior
+- [x] Create a pfSense rule to block ICMP (ping) from Kali to Ubuntu
+- [x] Test and log blocked traffic
+- [x] Document the rule's purpose and behavior
 
 ## Documentation
 - [ ] Create `README.md` in GitHub repo
