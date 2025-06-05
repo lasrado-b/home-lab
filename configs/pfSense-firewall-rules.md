@@ -27,7 +27,7 @@ To simulate basic internet network segmentation by preventing the "attacker" VM 
 
 ---
 
-### 🧪 Steps to Apply in pfSense
+### Steps to Apply in pfSense
 
 1. Navigate to **Firewall > Rules > LAN**
 2. Click **Add** (up arrow – add to top of list)
@@ -37,5 +37,5 @@ To simulate basic internet network segmentation by preventing the "attacker" VM 
    - **Protocol**: ICMP
    - **Source**: `Single host or alias` → `192.168.1.102`
    - **Destination**: `Single host or alias` → `192.168.1.10`
-4. ✅ Check **Log packets that are handled by this rule**
+4. Check **Log packets that are handled by this rule**
 5. Click **Save**, then **Apply Changes**
