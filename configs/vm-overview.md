@@ -2,6 +2,8 @@
 
 This file documents the current virtual machines deployed in the home lab environment. It includes details like operating system, IP address, hostname, and each VM's role in the network.
 
+_This document will be updated as the lab expands and new services or segments are added._
+
 ---
 
 ### VM Summary Table
