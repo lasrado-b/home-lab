@@ -37,3 +37,11 @@ Started and enabled it to run on boot:
 | Windows 10       | Browser http://192.168.1.10 | Nginx welcome page loaded |
 | Kali Linux       | Browser http://192.168.1.10 | Nginx welcome page loaded |
 | Kali Linux       | curl http://192.168.1.10    | Returned Nginx HTML response |
+
+---
+
+## Future Enhancements 
+
+- Replace the default Nginx page with a custome HTML dashboard
+- Create firewall rules to restrict HTTP access by IP or VLAN
+- add HTTPS with self-signed or internal certificate 
