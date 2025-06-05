@@ -6,8 +6,8 @@ This document tracks internal services deployed within the home lab environment,
 
 ## Service #1: Nginx Web Server
 
-**Deployed On** Ubuntu Server
-**IP Address** 192.168.1.10
+**Deployed On:** Ubuntu Server
+**IP Address:** 192.168.1.10
 **Port:** 80 (HTTP)
 **Purpose:** Internal web service to simulate hosted applications and test internal HTTPS access
 
