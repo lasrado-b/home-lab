@@ -3,8 +3,8 @@
 ## Infrastructure Setup
 - [x] Set static IP on Ubuntu Server via Netplan
 - [x] Confirm internet and DNS work from Ubuntu
-- [ ] Set hostname for all VMs (Ubuntu, Kali, Windows)
-- [ ] Ensure all VMs can ping each other and pfSense
+- [x] Set hostname for all VMs (Ubuntu, Kali, Windows)
+- [x] Ensure all VMs can ping each other and pfSense
 
 ## Remote Access
 - [x] Install and enable OpenSSH on Ubuntu Server
@@ -18,4 +18,4 @@
 ## Documentation
 - [x] Create `README.md` in GitHub repo
 - [x] Add current network diagram (hand-drawn or draw.io)
-- [ ] Document static IPs and hostnames for each VM
+- [x] Document static IPs and hostnames for each VM
