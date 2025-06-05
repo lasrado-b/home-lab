@@ -31,3 +31,8 @@ Started and enabled it to run on boot:
   ```
 
 ### Access Tests
+| Source VM        | Access Method        | Result                  |
+|------------------|----------------------|-------------------------|
+| Windows 10       | Browser http://192.168.1.10 | Nginx welcome page loaded |
+| Kali Linux       | Browser http://192.168.1.10 | Nginx welcome page loaded |
+| Kali Linux       | curl http://192.168.1.10    | Returned Nginx HTML response |
