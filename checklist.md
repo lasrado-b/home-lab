@@ -16,6 +16,6 @@
 - [x] Document the rule's purpose and behavior
 
 ## Documentation
-- [ ] Create `README.md` in GitHub repo
-- [ ] Add current network diagram (hand-drawn or draw.io)
+- [x] Create `README.md` in GitHub repo
+- [x] Add current network diagram (hand-drawn or draw.io)
 - [ ] Document static IPs and hostnames for each VM
