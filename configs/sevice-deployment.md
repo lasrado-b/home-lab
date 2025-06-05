@@ -40,8 +40,13 @@ Started and enabled it to run on boot:
 
 ---
 
+### Custom Page Deployed
+
+the default Nginx was replaced with a custom 'index.html' located at: /var/www/html/index.html
+
+---
+
 ## Future Enhancements 
 
-- Replace the default Nginx page with a custome HTML dashboard
 - Create firewall rules to restrict HTTP access by IP or VLAN
 - add HTTPS with self-signed or internal certificate 
