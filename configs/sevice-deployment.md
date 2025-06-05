@@ -13,7 +13,7 @@ This document tracks internal services deployed within the home lab environment,
 
 ---
 
-### Installtion Steps 
+### Installation Steps 
   ```
   sudo apt update && sudo apt upgrade -y
   sudo apt install nginx -y
