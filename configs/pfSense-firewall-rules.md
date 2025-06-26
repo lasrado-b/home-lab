@@ -80,3 +80,23 @@ To simulate basic internet network segmentation by preventing the "attacker" VM 
 **Result:**
 - [x] Kali denied access to internal web service
 - [x] Windows still able to load custom dashboard
+
+---
+
+## Rule 3: Block Kali from Ubuntu
+- **Action:** Block
+- **Interface:** LAN
+- **Protocol:** Any
+- **Source:** 192.168.2.0/24 (Kali Subnet)
+- **Destination:** 192.168.1.10 (Ubuntu Server)
+- **Description:** Block Kali subnet from Ubuntu server
+
+## Test Results
+- ✅ Ping from Kali to Ubuntu: 100% packet loss (Blocked)
+- ✅ SSH from Kali to Ubuntu: Not tested, but should also be blocked
+- ✅ Kali can still ping pfSense (192.168.1.1) and other devices
+- ✅ Kali can still access the internet
+
+## Notes
+- Rule is placed **above the default allow LAN rule** to ensure it takes precedence.
+- Logging is currently disabled for this rule to save log space. Can be enabled if needed.
