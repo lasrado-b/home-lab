@@ -43,6 +43,15 @@ I'm Bosco Lasrado, an IT Support and Customer Experience Professional with 5+ ye
 
 ---
 
+## 🔒 Firewall Configuration
+
+- Configured pfSense firewall rules to block unauthorized traffic.
+- Blocked all traffic from Kali subnet (192.168.2.0/24) to the Ubuntu server (192.168.1.10).
+- Verified the block by testing ICMP (ping) and confirmed 100% packet loss from Kali to Ubuntu.
+- Kali retains network access to other devices (e.g., pfSense, Windows VM, external internet) confirming proper segmentation.
+
+---
+
 ## Tools and Technologies Used
 
 - VirtualBox
