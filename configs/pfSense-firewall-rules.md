@@ -154,3 +154,4 @@ This rule was introduced as part of the next stage of the lab to simplify and sc
 ## Notes
 - Rule is placed **above the default allow LAN rule** to ensure it takes precedence.
 - Logging is enabled for this rule to support auditing. Can be disabled to save log space if required.
+- Rules 1 and 2 were superseded by the Phase 2 subnet-wide block but are retained here to demonstrate firewall evolution and testing progression.
