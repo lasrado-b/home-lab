@@ -30,7 +30,7 @@ This rule phased out the need for the earlier, protocol-specific blocks by fully
 ---
 
 ## Phase 1: Protocol-Specific Blocking
-### **Test Rule 1: Block ICMP (ping) from Kali to Ubuntu**
+### Test Rule 1: Block ICMP (ping) from Kali to Ubuntu
 ### Rule Purpose 
 To simulate basic internet network segmentation by preventing the "attacker" VM (Kali) from pinging the internal server (Ubuntu).
 
