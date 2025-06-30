@@ -88,7 +88,7 @@ To simulate basic internet network segmentation by preventing the "attacker" VM 
 - This rule simulates internal segmentation between sensitive services (Ubuntu) and untrusted endpoints (Kali).
 - ICMP blocking is a basic but effective test before implementing port-specific filtering.
 
-###Test Rule 2: Block HTTP Access to Web Server from Kali
+### Test Rule 2: Block HTTP Access to Web Server from Kali
 
 ### Rule Purpose 
 Restrict port 80 access to Ubuntu web server (192.168.1.10) only to approved devices (eg. Windows)
@@ -127,7 +127,7 @@ Restrict port 80 access to Ubuntu web server (192.168.1.10) only to approved dev
 ---
 
 ## Phase 2: Subnet-Wide Isolation
-###Test Rule 3: Block Kali from Ubuntu
+### Test Rule 3: Block Kali from Ubuntu
 ### Rule Purpose
 This rule was introduced as part of the next stage of the lab to simplify and scale security controls by isolating the entire Kali subnet.
 
