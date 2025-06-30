@@ -4,6 +4,14 @@
 **Lab Setup:** Home Lab - pfSense with 3 internal VMs
 **Objective:** Simulate basic traffic filtering and rule testing in a real-world small office network. 
 
+## Firewall Rules Summary
+
+| Rule | Purpose                               | Source               | Destination        | Protocol |
+|------|---------------------------------------|----------------------|--------------------|----------|
+| 1    | Block ICMP (ping) from Kali to Ubuntu | 192.168.1.102 (Kali) | 192.168.1.10       | ICMP     |
+| 2    | Block HTTP access from Kali to Ubuntu | 192.168.1.102 (Kali) | 192.168.1.10       | TCP 80   |
+| 3    | Block all traffic from Kali subnet    | 192.168.2.0/24       | 192.168.1.10       | Any      |
+
 ## Firewall Evolution: Phased Approach
 
 This firewall setup was built in **progressive phases** to demonstrate how security policies can evolve from simple, protocol-specific rules to broader, scalable subnet-based segmentation.
@@ -21,7 +29,7 @@ This rule phased out the need for the earlier, protocol-specific blocks by fully
 
 ---
 
-## Test Rule 1: Block ICMP (ping) from Kali to Ubuntu 
+**Test Rule 1: Block ICMP (ping) from Kali to Ubuntu**
 
 ### Rule Purpose 
 To simulate basic internet network segmentation by preventing the "attacker" VM (Kali) from pinging the internal server (Ubuntu).
@@ -80,7 +88,7 @@ To simulate basic internet network segmentation by preventing the "attacker" VM 
 - This rule simulates internal segmentation between sensitive services (Ubuntu) and untrusted endpoints (Kali).
 - ICMP blocking is a basic but effective test before implementing port-specific filtering.
 
-## Test Rule 2: Block HTTP Access to Web Server from Kali
+**Test Rule 2: Block HTTP Access to Web Server from Kali**
 
 **Objective:** Restrict port 80 access to Ubuntu web server (192.168.1.10) only to approved devices (eg. Windows)
 
@@ -119,17 +127,22 @@ To simulate basic internet network segmentation by preventing the "attacker" VM 
 
 ---
 
-**Phase 2: Subnet-Wide Block**
+## Phase 2: Subnet-Wide Block
 
 This rule was introduced as part of the next stage of the lab to simplify and scale security controls by isolating the entire Kali subnet.
 
-## Test Rule 3: Block Kali from Ubuntu
-- **Action:** Block
-- **Interface:** LAN
-- **Protocol:** Any
-- **Source:** 192.168.2.0/24 (Kali Subnet)
-- **Destination:** 192.168.1.10 (Ubuntu Server)
-- **Description:** Block Kali subnet from Ubuntu server
+**Test Rule 3: Block Kali from Ubuntu**
+
+### Rule Details
+
+| Setting        | Value                          |
+|----------------|--------------------------------|
+| **Action**     | Block                          |
+| **Interface**  | LAN                            |
+| **Protocol**   | Any                            |
+| **Source**     | 192.168.2.0/24 (Kali Subnet)   |
+| **Destination**| 192.168.1.10 (Ubuntu Server)   |
+| **Log**        | Enabled (for audit purposes)   |
 
 ## Test Results
 - [x] Ping from Kali to Ubuntu: 100% packet loss (Blocked)
