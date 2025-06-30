@@ -1,7 +1,9 @@
 # pfSense Firewall Rules
 
 **Author:** Bosco Lasrado
+
 **Lab Setup:** Home Lab - pfSense with 3 internal VMs
+
 **Objective:** Simulate basic traffic filtering and rule testing in a real-world small office network. 
 
 ## Firewall Rules Summary
