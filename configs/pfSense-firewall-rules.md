@@ -33,7 +33,7 @@ This rule phased out the need for the earlier, protocol-specific blocks by fully
 
 ## Phase 1: Protocol-Specific Blocking
 ### Test Rule 1: Block ICMP (ping) from Kali to Ubuntu
-### Rule Purpose 
+#### Rule Purpose 
 To simulate basic internet network segmentation by preventing the "attacker" VM (Kali) from pinging the internal server (Ubuntu).
 
 ---
@@ -93,8 +93,7 @@ To simulate basic internet network segmentation by preventing the "attacker" VM 
 - ICMP blocking is a basic but effective test before implementing port-specific filtering.
 
 ### Test Rule 2: Block HTTP Access to Web Server from Kali
-
-### Rule Purpose 
+#### Rule Purpose 
 Restrict port 80 access to Ubuntu web server (192.168.1.10) only to approved devices (eg. Windows)
 
 ### Rule Details
@@ -131,8 +130,8 @@ Restrict port 80 access to Ubuntu web server (192.168.1.10) only to approved dev
 ---
 
 ## Phase 2: Subnet-Wide Isolation
-### Test Rule 3: Block Kali from Ubuntu
-### Rule Purpose
+### Test Rule 3: Block All Traffic from Kali Subnet to Ubuntu
+#### Rule Purpose
 This rule was introduced as part of the next stage of the lab to simplify and scale security controls by isolating the entire Kali subnet.
 
 ### Rule Details
@@ -154,4 +153,4 @@ This rule was introduced as part of the next stage of the lab to simplify and sc
 
 ## Notes
 - Rule is placed **above the default allow LAN rule** to ensure it takes precedence.
-- Logging is currently disabled for this rule to save log space. Can be enabled if needed.
+- Logging is enabled for this rule to support auditing. Can be disabled to save log space if required.
