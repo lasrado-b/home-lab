@@ -74,6 +74,7 @@ To simulate basic internet network segmentation by preventing the "attacker" VM 
   PING 192.168.1.10 (192.168.1.10) 56(84) bytes of data.
   From 192.168.1.102 icmp_seq=1 Destination Host Unreachable
   ping: sendmsg: No route to host
+  ```
 
 - From Ubuntu:
   ```
@@ -85,6 +86,7 @@ To simulate basic internet network segmentation by preventing the "attacker" VM 
   --- 192.168.1.102 ping statistics ---
   3 packets transmitted, 3 received, 0% packet loss, time 2027ms
   rtt min/avg/max/mdev = 0.019/0.030/0.039/0.008 ms
+  ```
 
 **Notes:**
 - This rule simulates internal segmentation between sensitive services (Ubuntu) and untrusted endpoints (Kali).
