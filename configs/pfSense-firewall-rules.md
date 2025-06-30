@@ -4,6 +4,21 @@
 **Lab Setup:** Home Lab - pfSense with 3 internal VMs
 **Objective:** Simulate basic traffic filtering and rule testing in a real-world small office network. 
 
+## Firewall Evolution: Phased Approach
+
+This firewall setup was built in **progressive phases** to demonstrate how security policies can evolve from simple, protocol-specific rules to broader, scalable subnet-based segmentation.
+
+### Phase 1: Protocol-Specific Blocking
+- **Test Rule 1:** Blocked ICMP (ping) from Kali to Ubuntu to prevent basic network discovery.
+- **Test Rule 2:** Blocked HTTP (port 80) access from Kali to Ubuntu to restrict web service exposure.
+
+These initial rules provided targeted protections and were useful for practicing specific firewall configurations and testing granular controls.
+
+### Phase 2: Subnet-Wide Isolation
+- **Test Rule 3:** Implemented a more scalable, comprehensive rule that blocks **all traffic from the entire Kali subnet (192.168.2.0/24) to Ubuntu.**
+
+This rule phased out the need for the earlier, protocol-specific blocks by fully segmenting the attacker network from the internal server.
+
 ---
 
 ## Test Rule 1: Block ICMP (ping) from Kali to Ubuntu 
@@ -69,21 +84,46 @@ To simulate basic internet network segmentation by preventing the "attacker" VM 
 
 **Objective:** Restrict port 80 access to Ubuntu web server (192.168.1.10) only to approved devices (eg. Windows)
 
-**Rule Details**
-- Action: bock
-- Protocol: TCP
-- Source: 192.168.1.102 (Kali)
-- Destination: 192.168.1.10
-- Port: 80 (HTTP)
-- Logging: Enabled
+### Rule Details
 
-**Result:**
-- [x] Kali denied access to internal web service
-- [x] Windows still able to load custom dashboard
+| Setting        | Value                       |
+|----------------|-----------------------------|
+| **Action**     | Block                       |
+| **Protocol**   | TCP                         |
+| **Port**       | 80 (HTTP)                   |
+| **Source**     | 192.168.1.102 (Kali)        |
+| **Destination**| 192.168.1.10 (Ubuntu)       |
+| **Log**        | Enabled (for audit purposes)|
 
 ---
 
-## Rule 3: Block Kali from Ubuntu
+### Steps to Apply in pfSense
+
+1. Navigate to **Firewall > Rules > LAN**
+2. Click **Add** (up arrow – add to top of list)
+3. Set:
+   - **Action**: Block
+   - **Interface**: LAN
+   - **Protocol**: TCP
+   - **Port**: 80
+   - **Source**: `Single host or alias` → `192.168.1.102`
+   - **Destination**: `Single host or alias` → `192.168.1.10`
+4. Check **Log packets that are handled by this rule**
+5. Click **Save**, then **Apply Changes**
+
+### Test Results
+- [x] Kali denied access to internal web service
+- [x] Windows still able to load custom dashboard
+
+**Note:** This rule was part of Phase 1 testing. In Phase 2, we implemented subnet-wide blocking that supersedes this protocol-specific rule.
+
+---
+
+**Phase 2: Subnet-Wide Block**
+
+This rule was introduced as part of the next stage of the lab to simplify and scale security controls by isolating the entire Kali subnet.
+
+## Test Rule 3: Block Kali from Ubuntu
 - **Action:** Block
 - **Interface:** LAN
 - **Protocol:** Any
@@ -92,10 +132,10 @@ To simulate basic internet network segmentation by preventing the "attacker" VM 
 - **Description:** Block Kali subnet from Ubuntu server
 
 ## Test Results
-- ✅ Ping from Kali to Ubuntu: 100% packet loss (Blocked)
-- ✅ SSH from Kali to Ubuntu: Not tested, but should also be blocked
-- ✅ Kali can still ping pfSense (192.168.1.1) and other devices
-- ✅ Kali can still access the internet
+- [x] Ping from Kali to Ubuntu: 100% packet loss (Blocked)
+- [x] SSH from Kali to Ubuntu: Not tested, but should also be blocked
+- [x] Kali can still ping pfSense (192.168.1.1) and other devices
+- [x] Kali can still access the internet
 
 ## Notes
 - Rule is placed **above the default allow LAN rule** to ensure it takes precedence.
