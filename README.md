@@ -167,7 +167,7 @@ Examples to practice:
 
 ## Network Diagram
 
-![Network Diagram](diagrams/network-topology.drawio.png)
+![Network Diagram](diagrams/network-topology-updated.drawio.png)
 
 ## Repo Structure
 ```
