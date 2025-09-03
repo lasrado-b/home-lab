@@ -43,7 +43,7 @@ I'm Bosco Lasrado, an IT Support and Customer Experience Professional with 5+ ye
 
 ---
 
-## 🔒 Firewall Configuration
+## Firewall Configuration
 
 - Configured pfSense firewall rules to block unauthorized traffic.
 - Blocked all traffic from Kali subnet (192.168.2.0/24) to the Ubuntu server (192.168.1.10).
@@ -66,7 +66,7 @@ I'm Bosco Lasrado, an IT Support and Customer Experience Professional with 5+ ye
 
 ---
 
-# 🖥️ Active Directory Expansion
+# Active Directory Expansion
 
 This document outlines the addition of a Microsoft Active Directory (AD) environment into the **Home Lab**. The goal is to simulate a real-world enterprise setup, practice domain management, and showcase skills relevant to IT, system administration, and cybersecurity roles.
 
