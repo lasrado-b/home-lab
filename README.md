@@ -66,6 +66,105 @@ I'm Bosco Lasrado, an IT Support and Customer Experience Professional with 5+ ye
 
 ---
 
+# 🖥️ Active Directory Expansion
+
+This document outlines the addition of a Microsoft Active Directory (AD) environment into the **Home Lab**. The goal is to simulate a real-world enterprise setup, practice domain management, and showcase skills relevant to IT, system administration, and cybersecurity roles.
+
+---
+
+## 🔹 Architecture Overview
+- **Domain Controller (DC):** Windows Server 2022 (trial)
+- **Domain Name:** `homelab.local`
+- **Client VM:** Windows 10/11 joined to the domain
+- **Optional:** Ubuntu client joined via LDAP/SSSD for Linux integration
+- **Network Segmentation:** DC in **server VLAN**, clients in **workstation VLAN** (controlled via pfSense)
+
+---
+
+## 🔹 VM Requirements
+**Windows Server 2022 (Domain Controller)**
+- 2 vCPUs  
+- 4–6 GB RAM  
+- 60 GB storage  
+- Static IP in *Server subnet*  
+
+**Windows 10/11 Client**
+- 2 vCPUs  
+- 4 GB RAM  
+- 40 GB storage  
+- DHCP in *Workstation subnet*  
+
+---
+
+## 🔹 Setup Steps
+
+### 1. Install Windows Server 2022
+- Use Microsoft’s evaluation ISO.  
+- Select **Desktop Experience** during installation.  
+- Configure a static IP (example: `192.168.10.10`).  
+
+### 2. Install Active Directory Domain Services (AD DS)
+- Open **Server Manager** → **Add Roles and Features** → enable **AD DS**.  
+- Promote to Domain Controller.  
+- Create a new forest: `homelab.local`.  
+- Install DNS role during promotion.  
+
+### 3. Configure Organizational Units (OUs)
+- Create the following structure in **Active Directory Users and Computers**:  
+  - `OU=Users`  
+  - `OU=Computers`  
+  - `OU=Groups`  
+
+### 4. Create Test Accounts
+- User: `bosco.lasrado` → Domain Admin.  
+- User: `mendes.test` → Standard User.  
+- Groups: `IT_Staff`, `HR_Staff`.  
+
+### 5. Join Windows Client to Domain
+- On Windows 10/11, point DNS to the DC (`192.168.10.10`).  
+- Join domain: `homelab.local`.  
+- Log in as `mendes.test`.  
+
+### 6. Apply Group Policy (GPO)
+Examples to practice:
+- Enforce strong password policies.  
+- Redirect Documents folder to a network share.  
+- Map a network drive automatically.  
+- Disable Control Panel for standard users.  
+
+### 7. Integration Scenarios (Optional)
+- **pfSense:** Use AD for VPN authentication.  
+- **Nextcloud:** Configure LDAP/AD login.  
+- **Linux Client:** Join Ubuntu to AD with `realmd` + `sssd`.  
+
+---
+
+## 🔹 Real-World Scenarios to Practice
+- **User Onboarding:** Create new users, assign groups, test access.  
+- **Access Control:** Restrict HR files to `HR_Staff` only.  
+- **Policy Enforcement:** Push software restrictions or desktop settings via GPO.  
+- **Troubleshooting:** Apply GPO → run `gpupdate /force` → verify with `rsop.msc`.  
+- **Helpdesk Simulation:** Reset locked-out passwords, expire accounts, disable users.  
+
+---
+
+## 🔹 Documentation to Include
+- Screenshots:  
+  - AD DS installation  
+  - Domain join confirmation  
+  - GPO applied on client  
+- Network diagram showing AD’s place in the lab  
+- Notes on issues + fixes (for troubleshooting documentation)  
+
+---
+
+## 🔹 Next Steps
+- Add a **second Domain Controller** for redundancy (optional advanced exercise).  
+- Explore **Group Policy Preferences** (drive mappings, registry changes).  
+- Practice **AD security hardening** (audit policies, Kerberos, account lockout thresholds).  
+
+---
+
 ## Network Diagram
 
 ![Network Diagram](diagrams/network-topology.drawio.png)
